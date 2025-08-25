@@ -3,227 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로마서 2장 구조 인포그래픽</title>
+    <title>로마서 2장 인포그래픽 (성경 구절 포함)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f8fafc;
+            background-color: #f0f4f8;
         }
-        .flow-line {
-            position: relative;
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid;
         }
-        .flow-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: -2rem;
-            transform: translateX(-50%);
-            width: 2px;
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .card-icon {
+            width: 2rem;
             height: 2rem;
-            background-color: #cbd5e1;
+            margin-right: 0.75rem;
         }
-        .detail-card {
-            transition: background-color 0.3s ease;
+        .flow-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+            color: #9ca3af;
         }
-        .verses-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.7s ease-in-out;
+        .vs-circle {
+            background-color: #ef4444;
+            color: white;
+            border-radius: 9999px;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            margin: 1rem auto;
+        }
+        details > summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: #4b5563;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        details[open] > summary {
+            background-color: #f3f4f6;
+        }
+        details summary::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.2s;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .verse-box {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .verse-box strong {
+            font-weight: 700;
         }
     </style>
 </head>
-<body class="p-4 md:p-8">
-    <div class="max-w-7xl mx-auto">
+<body class="p-4 sm:p-6 md:p-8 bg-slate-100">
 
-        <!-- 1. 전체 구조 -->
-        <div class="text-center mb-8">
-            <span class="text-sm font-semibold text-indigo-600 bg-indigo-100 rounded-full px-3 py-1">1. 전체 구조</span>
-            <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mt-2">하나님의 공의로운 심판</h1>
-            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">
-                로마서 2장은 남을 <strong class="text-sky-600">판단하는 위선자</strong> 역시 심판의 대상임을 선언하며, 행위에 따른 <strong class="text-emerald-600">하나님의 공의로운 심판 원리</strong>를 제시합니다. 이 원리는 <strong class="text-amber-600">율법을 가진 자와 양심을 가진 자</strong> 모두에게 적용됨을 밝히고, 이를 근거로 <strong class="text-orange-600">율법을 자랑하나 행하지 않는 유대인의 모순</strong>을 지적합니다. 최종적으로 참된 신앙의 표지는 외적인 할례가 아닌 <strong class="text-red-600">마음의 할례</strong>에 있음을 논증합니다.
-            </p>
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-800">로마서 2장 핵심 구조</h1>
+            <p class="text-slate-600 mt-2">바울의 논증을 따라가는 시각적 가이드 (암송용)</p>
+        </header>
+
+        <!-- 1. 위선적인 판단 (1-5절) -->
+        <div class="card border-blue-500">
+            <h2 class="card-title text-blue-800">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.153.34c-1.128 0-2.236-.32-3.218-.886M15 4.97a48.349 48.349 0 01-3 0m3 0l-2.62 10.726M5.25 4.97A48.416 48.416 0 0112 4.5c2.291 0 4.545.16 6.75.47m-13.5 0c-1.01.143-2.01.317-3 .52m3-.52l-2.62 10.726C2.122 15.99 2.35 16.52 2.833 16.7c.482.173 1.002.173 1.484 0a5.988 5.988 0 012.153-.34c1.128 0 2.236.32 3.218.886M9 4.97a48.349 48.349 0 003 0m-3 0l2.62 10.726" /></svg>
+                1. 위선적인 판단
+            </h2>
+            <p class="text-center bg-blue-50 p-3 rounded-lg">남을 판단하는 자, 그가 바로 <strong class="text-blue-600">자신을 정죄하는 자</strong>이다.</p>
+            <div class="my-4 border-t pt-4 text-center">
+                <p class="font-bold text-red-600">경고!</p>
+                <p>하나님의 <strong class="text-red-500">인자하심과 길이 참으심</strong>을 멸시하지 말라. 그것은 우리를 <strong class="text-red-500">회개</strong>로 이끄는 길이다.</p>
+            </div>
+            <details>
+                <summary>말씀 보기 (1-5절)</summary>
+                <div class="verse-box">
+                    <p><strong>1</strong> 그러므로 <strong class="text-blue-600">남을 판단하는 사람아</strong>, 누구를 막론하고 네가 핑계하지 못할 것은 남을 판단하는 것으로 <strong class="text-blue-600">네가 너를 정죄함이니</strong> 판단하는 네가 <strong class="text-blue-600">같은 일을 행함이니라</strong></p>
+                    <p><strong>2</strong> 이런 일을 행하는 자에게 <strong class="text-blue-600">하나님의 심판이 진리대로</strong> 되는 줄 우리가 아노라</p>
+                    <p><strong>3</strong> 이런 일을 행하는 자를 판단하고도 같은 일을 행하는 사람아, 네가 <strong class="text-blue-600">하나님의 심판을 피할 줄로 생각하느냐</strong></p>
+                    <p><strong>4</strong> 혹 네가 하나님의 <strong class="text-red-600">인자하심이</strong> 너를 인도하여 <strong class="text-red-600">회개하게 하심을</strong> 알지 못하여 그의 인자하심과 용납하심과 길이 참으심이 풍성함을 <strong class="text-red-600">멸시하느냐</strong></p>
+                    <p><strong>5</strong> 다만 네 <strong class="text-red-600">고집과 회개하지 아니한 마음을 따라</strong> 진노의 날 곧 하나님의 의로우신 심판이 나타나는 그 날에 임할 <strong class="text-red-600">진노를 네게 쌓는도다</strong></p>
+                </div>
+            </details>
         </div>
-        
-        <div class="flex justify-center my-8">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
+
+        <!-- 2. 하나님의 공의로운 심판 (6-11절) -->
+        <div class="card border-green-500">
+            <h2 class="card-title text-green-800">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75v16.5M2.25 12h19.5M6.375 6.375l11.25 11.25M17.625 6.375L6.375 17.625" /></svg>
+                2. 하나님의 공의로운 심판
+            </h2>
+            <p class="text-center bg-green-50 p-3 rounded-lg font-bold">하나님은 각 사람의 <strong class="text-green-600">행한 대로</strong> 보응하신다. (<strong class="text-red-500">외모로 판단 X</strong>)</p>
+            <div class="flex flex-col md:flex-row justify-between items-start mt-4 gap-4">
+                <div class="w-full md:w-1/2 p-4 bg-green-100 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-green-800">선을 행하는 자</h3>
+                    <p class="p-3 bg-white rounded-lg font-bold text-green-700">영생, 영광, 존귀, 평강</p>
+                </div>
+                <div class="w-full md:w-1/2 p-4 bg-red-100 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-red-800">악을 행하는 자</h3>
+                    <p class="p-3 bg-white rounded-lg font-bold text-red-700">진노, 분노, 환난, 곤고</p>
+                </div>
+            </div>
+            <details class="mt-4">
+                <summary>말씀 보기 (6-11절)</summary>
+                <div class="verse-box">
+                    <p><strong>6</strong> 하나님께서 각 사람에게 <strong class="text-slate-700">그 행한 대로 보응하시되</strong></p>
+                    <p><strong>7</strong> 참고 <strong class="text-green-600">선을 행하여</strong> 영광과 존귀와 썩지 아니함을 구하는 자에게는 <strong class="text-green-600">영생으로 하시고</strong></p>
+                    <p><strong>8</strong> 오직 당을 지어 진리를 따르지 아니하고 <strong class="text-red-600">불의를 따르는 자에게는</strong> <strong class="text-red-600">진노와 분노로 하시리라</strong></p>
+                    <p><strong>9</strong> <strong class="text-red-600">악을 행하는</strong> 각 사람의 영에는 <strong class="text-red-600">환난과 곤고가 있으리니</strong> 먼저는 유대인에게요 그리고 헬라인에게며</p>
+                    <p><strong>10</strong> <strong class="text-green-600">선을 행하는</strong> 각 사람에게는 <strong class="text-green-600">영광과 존귀와 평강이 있으리니</strong> 먼저는 유대인에게요 그리고 헬라인에게라</p>
+                    <p><strong>11</strong> 이는 하나님께서 <strong class="text-slate-700">외모로 사람을 취하지 아니하심이라</strong></p>
+                </div>
+            </details>
         </div>
 
-        <!-- 2. 중간 구조 -->
-        <div class="text-center mb-12">
-            <span class="text-sm font-semibold text-teal-600 bg-teal-100 rounded-full px-3 py-1">2. 중간 구조</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 mt-2">5가지 핵심 논증</h2>
-            <p class="text-md text-gray-500 mt-1">대주제를 증명하기 위한 5단계의 논리 전개</p>
+        <!-- 3. 율법과 양심 (12-16절) -->
+        <div class="card border-purple-500">
+            <h2 class="card-title text-purple-800">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                3. 율법과 양심
+            </h2>
+            <p class="text-center bg-purple-50 p-3 rounded-lg font-bold">중요한 것은 율법을 <strong class="text-purple-600">듣는 것</strong>이 아니라 <strong class="text-purple-600">행하는 것!</strong></p>
+            <div class="flex flex-col md:flex-row justify-between items-stretch mt-4 gap-4">
+                <div class="w-full md:w-1/2 p-4 border-2 border-dashed border-slate-300 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-slate-800">율법 있는 자 (유대인)</h3>
+                    <p class="my-2">죄를 지으면 → <strong class="text-purple-700">율법</strong>으로 심판 받음</p>
+                </div>
+                <div class="w-full md:w-1/2 p-4 border-2 border-dashed border-slate-300 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-slate-800">율법 없는 자 (이방인)</h3>
+                    <p class="my-2">죄를 지으면 → 마음에 새겨진 <strong class="text-purple-700">양심</strong>이 증거가 됨</p>
+                </div>
+            </div>
+            <details class="mt-4">
+                <summary>말씀 보기 (12-16절)</summary>
+                <div class="verse-box">
+                    <p><strong>12</strong> 무릇 <strong class="text-purple-600">율법 없이 범죄한 자는</strong> 또한 율법 없이 망하고 무릇 <strong class="text-purple-600">율법이 있고 범죄한 자는 율법으로 말미암아 심판을 받으리라</strong></p>
+                    <p><strong>13</strong> 하나님 앞에서는 <strong class="text-purple-600">율법을 듣는 자가 의인이 아니요</strong> 오직 <strong class="text-purple-600">율법을 행하는 자라야</strong> 의롭다 하심을 얻으리니</p>
+                    <p><strong>14</strong> (율법 없는 이방인이 본성으로 율법의 일을 행할 때에는 이 사람은 율법이 없어도 <strong class="text-purple-600">자기가 자기에게 율법이 되나니</strong></p>
+                    <p><strong>15</strong> 이런 이들은 <strong class="text-purple-600">그 양심이 증거가 되어</strong> 그 생각들이 서로 혹은 고발하며 혹은 변명하여 그 <strong class="text-purple-600">마음에 새긴 율법의 행위를 나타내느니라</strong>)</p>
+                    <p><strong>16</strong> 곧 나의 복음에 이른 바와 같이 하나님이 예수 그리스도로 말미암아 사람들의 <strong class="text-purple-600">은밀한 것을 심판하시는 그 날이라</strong></p>
+                </div>
+            </details>
         </div>
 
-        <!-- 3. 세부 구조 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-
-            <!-- Part 1 -->
-            <div class="flow-line text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-sky-500 h-full flex flex-col">
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-bold text-sky-700 mb-2">1. 판단하는 위선자 (1-5절)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">남을 판단하는 죄를 자신도 똑같이 지음으로써 <strong class="text-sky-600">스스로를 정죄하는 모순</strong>을 지적하고, 회개를 기다리시는 <strong class="text-sky-600">하나님의 인내를 오해하여 오히려 진노를 쌓는</strong> 어리석음을 경고합니다.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <h4 class="font-semibold text-gray-600 mb-2">세부 구조 & 말씀</h4>
-                            <div class="space-y-4 text-left">
-                                <div class="detail-card bg-sky-50 p-3 rounded-lg">
-                                    <p class="text-sky-800 font-semibold text-sm">➡️ 자기모순적 판단</p>
-                                    <button class="toggle-verses text-xs font-semibold text-sky-600 hover:underline">말씀 보기 (1-3절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>1</strong> 그러므로 남을 판단하는 사람아, 누구를 막론하고 네가 핑계하지 못할 것은 남을 판단하는 것으로 네가 너를 정죄함이니 판단하는 네가 같은 일을 행함이니라<br><strong>2</strong> 이런 일을 행하는 자에게 하나님의 심판이 진리대로 되는 줄 우리가 아노라<br><strong>3</strong> 이런 일을 행하는 자를 판단하고도 같은 일을 행하는 사람아, 네가 하나님의 심판을 피할 줄로 생각하느냐</p>
-                                    </div>
-                                </div>
-                                <div class="detail-card bg-sky-50 p-3 rounded-lg">
-                                    <p class="text-sky-800 font-semibold text-sm">➡️ 하나님의 인내와 인간의 고집</p>
-                                    <button class="toggle-verses text-xs font-semibold text-sky-600 hover:underline">말씀 보기 (4-5절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>4</strong> 혹 네가 하나님의 인자하심이 너를 인도하여 회개하게 하심을 알지 못하여 그의 인자하심과 용납하심과 길이 참으심이 풍성함을 멸시하느냐<br><strong>5</strong> 다만 네 고집과 회개하지 아니한 마음을 따라 진노의 날 곧 하나님의 의로우신 심판이 나타나는 그 날에 임할 진노를 네게 쌓는도다</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- 4. 유대인의 모순 (17-24절) -->
+        <div class="card border-orange-500">
+            <h2 class="card-title text-orange-800">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                4. 유대인의 모순
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="w-full md:w-1/2 p-4 bg-orange-50 rounded-lg">
+                    <h3 class="font-bold text-lg text-orange-900">자랑 (앎)</h3>
+                    <ul class="list-disc list-inside mt-2 text-slate-700"><li>율법을 의지함</li><li>하나님을 자랑함</li><li>맹인의 인도자</li></ul>
+                </div>
+                <div class="w-full md:w-1/2 p-4 bg-red-50 rounded-lg">
+                    <h3 class="font-bold text-lg text-red-900">실제 (행함)</h3>
+                     <ul class="list-disc list-inside mt-2 text-slate-700"><li>자신은 가르치지 않음</li><li>도둑질, 간음함</li><li>율법을 범함</li></ul>
                 </div>
             </div>
-
-            <!-- Part 2 -->
-            <div class="flow-line text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-emerald-500 h-full flex flex-col">
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-bold text-emerald-700 mb-2">2. 심판의 공의로운 원리 (6-11절)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">심판의 기준은 각 사람의 <strong class="text-emerald-600">행위에 따른 보응</strong>이며, 이 원리는 유대인과 이방인 모두에게 <strong class="text-emerald-600">차별 없이 공평하게</strong> 적용됩니다.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                             <h4 class="font-semibold text-gray-600 mb-2">세부 구조 & 말씀</h4>
-                            <div class="space-y-4 text-left">
-                                <div class="detail-card bg-emerald-50 p-3 rounded-lg">
-                                    <p class="text-emerald-800 font-semibold text-sm">➡️ 행위에 따른 보응</p>
-                                    <button class="toggle-verses text-xs font-semibold text-emerald-600 hover:underline">말씀 보기 (6-10절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>6</strong> 하나님께서 각 사람에게 그 행한 대로 보응하시되<br><strong>7</strong> 참고 선을 행하여 영광과 존귀와 썩지 아니함을 구하는 자에게는 영생으로 하시고<br><strong>8</strong> 오직 당을 지어 진리를 따르지 아니하고 불의를 따르는 자에게는 진노와 분노로 하시리라<br><strong>9</strong> 악을 행하는 각 사람의 영에는 환난과 곤고가 있으리니 먼저는 유대인에게요 그리고 헬라인에게며<br><strong>10</strong> 선을 행하는 각 사람에게는 영광과 존귀와 평강이 있으리니 먼저는 유대인에게요 그리고 헬라인에게라</p>
-                                    </div>
-                                </div>
-                                <div class="detail-card bg-emerald-50 p-3 rounded-lg">
-                                    <p class="text-emerald-800 font-semibold text-sm">➡️ 차별 없는 공평함</p>
-                                    <button class="toggle-verses text-xs font-semibold text-emerald-600 hover:underline">말씀 보기 (11절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>11</strong> 이는 하나님께서 외모로 사람을 취하지 아니하심이라</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <p class="text-center mt-4 bg-red-100 p-3 rounded-lg font-bold text-red-800">결과: 하나님의 이름이 너희 때문에 이방인 중에서 모독을 받는도다</p>
+            <details class="mt-4">
+                <summary>말씀 보기 (17-24절)</summary>
+                <div class="verse-box">
+                    <p><strong>17-20</strong> <strong class="text-orange-600">유대인이라 불리는 네가</strong> 율법을 의지하며 하나님을 자랑하며... 맹인의 길을 인도하는 자요... 선생이라고 <strong class="text-orange-600">스스로 믿으니</strong></p>
+                    <p><strong>21</strong> 그러면 다른 사람을 가르치는 네가 <strong class="text-red-600">네 자신은 가르치지 아니하느냐</strong> <strong class="text-red-600">도둑질하지 말라</strong> 선포하는 네가 <strong class="text-red-600">도둑질하느냐</strong></p>
+                    <p><strong>22</strong> <strong class="text-red-600">간음하지 말라</strong> 말하는 네가 <strong class="text-red-600">간음하느냐</strong> 우상을 가증히 여기는 네가 신전 물건을 도둑질하느냐</p>
+                    <p><strong>23</strong> 율법을 자랑하는 네가 <strong class="text-red-600">율법을 범함으로 하나님을 욕되게 하느냐</strong></p>
+                    <p><strong>24</strong> 기록된 바와 같이 <strong class="text-red-600">하나님의 이름이 너희 때문에</strong> 이방인 중에서 <strong class="text-red-600">모독을 받는도다</strong></p>
                 </div>
-            </div>
-
-            <!-- Part 3 -->
-            <div class="flow-line text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-500 h-full flex flex-col">
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-bold text-amber-700 mb-2">3. 율법과 심판의 기준 (12-16절)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">율법을 아는 것이 아니라 <strong class="text-amber-600">율법을 행하는 것이 중요함</strong>을 강조하며, 율법이 없는 이방인에게는 <strong class="text-amber-600">그들의 양심이 율법의 역할</strong>을 하여 심판의 기준이 됨을 설명합니다.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                             <h4 class="font-semibold text-gray-600 mb-2">세부 구조 & 말씀</h4>
-                            <div class="space-y-4 text-left">
-                                <div class="detail-card bg-amber-50 p-3 rounded-lg">
-                                    <p class="text-amber-800 font-semibold text-sm">➡️ '듣는 자'가 아닌 '행하는 자'</p>
-                                    <button class="toggle-verses text-xs font-semibold text-amber-600 hover:underline">말씀 보기 (12-13절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>12</strong> 무릇 율법 없이 범죄한 자는 또한 율법 없이 망하고 무릇 율법이 있고 범죄한 자는 율법으로 말미암아 심판을 받으리라<br><strong>13</strong> 하나님 앞에서는 율법을 듣는 자가 의인이 아니요 오직 율법을 행하는 자라야 의롭다 하심을 얻으리니</p>
-                                    </div>
-                                </div>
-                                <div class="detail-card bg-amber-50 p-3 rounded-lg">
-                                    <p class="text-amber-800 font-semibold text-sm">➡️ 이방인의 양심</p>
-                                    <button class="toggle-verses text-xs font-semibold text-amber-600 hover:underline">말씀 보기 (14-16절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>14</strong> (율법 없는 이방인이 본성으로 율법의 일을 행할 때에는 이 사람은 율법이 없어도 자기가 자기에게 율법이 되나니<br><strong>15</strong> 이런 이들은 그 양심이 증거가 되어 그 생각들이 서로 혹은 고발하며 혹은 변명하여 그 마음에 새긴 율법의 행위를 나타내느니라)<br><strong>16</strong> 곧 나의 복음에 이른 바와 같이 하나님이 예수 그리스도로 말미암아 사람들의 은밀한 것을 심판하시는 그 날이라</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Part 4 -->
-            <div class="flow-line text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500 h-full flex flex-col">
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-bold text-orange-700 mb-2">4. 유대인의 모순 (17-24절)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">율법을 가졌다는 <strong class="text-orange-600">영적 자부심</strong>과, 실제로는 <strong class="text-orange-600">가르침과 삶이 불일치하는 위선적인 모습</strong>을 날카롭게 대조하며, 그 결과 하나님의 이름이 모독당하고 있음을 고발합니다.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <h4 class="font-semibold text-gray-600 mb-2">세부 구조 & 말씀</h4>
-                            <div class="space-y-4 text-left">
-                                <div class="detail-card bg-orange-50 p-3 rounded-lg">
-                                    <p class="text-orange-800 font-semibold text-sm">➡️ 율법을 통한 자부심</p>
-                                    <button class="toggle-verses text-xs font-semibold text-orange-600 hover:underline">말씀 보기 (17-20절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>17</strong> 유대인이라 불리는 네가 율법을 의지하며 하나님을 자랑하며<br><strong>18</strong> 율법의 교훈을 받아 하나님의 뜻을 알고 지극히 선한 것을 분간하며<br><strong>19</strong> 맹인의 길을 인도하는 자요 어둠에 있는 자의 빛이요<br><strong>20</strong> 율법에 있는 지식과 진리의 모본을 가진 자로서 어리석은 자의 교사요 어린 아이의 선생이라고 스스로 믿으니</p>
-                                    </div>
-                                </div>
-                                <div class="detail-card bg-orange-50 p-3 rounded-lg">
-                                    <p class="text-orange-800 font-semibold text-sm">➡️ 가르침과 삶의 불일치</p>
-                                    <button class="toggle-verses text-xs font-semibold text-orange-600 hover:underline">말씀 보기 (21-24절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>21</strong> 그러면 다른 사람을 가르치는 네가 네 자신은 가르치지 아니하느냐 도둑질하지 말라 선포하는 네가 도둑질하느냐<br><strong>22</strong> 간음하지 말라 말하는 네가 간음하느냐 우상을 가증히 여기는 네가 신전 물건을 도둑질하느냐<br><strong>23</strong> 율법을 자랑하는 네가 율법을 범함으로 하나님을 욕되게 하느냐<br><strong>24</strong> 기록된 바와 같이 하나님의 이름이 너희 때문에 이방인 중에서 모독을 받는도다</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Part 5 -->
-            <div class="flow-line text-center">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500 h-full flex flex-col">
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-bold text-red-700 mb-2">5. 참된 할례의 의미 (25-29절)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed"><strong class="text-red-600">외적인 할례는 율법을 지킬 때만 유익</strong>하며, 진정한 유대인의 표지는 율법 조문이 아닌 영으로 말미암는 <strong class="text-red-600">마음의 할례</strong>, 즉 내면의 변화에 있음을 결론 내립니다.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <h4 class="font-semibold text-gray-600 mb-2">세부 구조 & 말씀</h4>
-                            <div class="space-y-4 text-left">
-                                <div class="detail-card bg-red-50 p-3 rounded-lg">
-                                    <p class="text-red-800 font-semibold text-sm">➡️ 외적 할례의 조건부 유익</p>
-                                    <button class="toggle-verses text-xs font-semibold text-red-600 hover:underline">말씀 보기 (25-27절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>25</strong> 네가 율법을 행하면 할례가 유익하나 만일 율법을 범하면 네 할례는 무할례가 되느니라<br><strong>26</strong> 그런즉 무할례자가 율법의 규례를 지키면 그 무할례를 할례와 같이 여길 것이 아니냐<br><strong>27</strong> 또한 본래 무할례자가 율법을 온전히 지키면 율법 조문과 할례를 가지고 율법을 범하는 너를 정죄하지 아니하겠느냐</p>
-                                    </div>
-                                </div>
-                                <div class="detail-card bg-red-50 p-3 rounded-lg">
-                                    <p class="text-red-800 font-semibold text-sm">➡️ 마음의 할례</p>
-                                    <button class="toggle-verses text-xs font-semibold text-red-600 hover:underline">말씀 보기 (28-29절)</button>
-                                    <div class="verses-content text-left text-sm text-gray-700 mt-2 bg-white p-3 rounded-md border">
-                                        <p><strong>28</strong> 무릇 표면적 유대인이 유대인이 아니요 표면적 육신의 할례가 할례가 아니니라<br><strong>29</strong> 오직 이면적 유대인이 유대인이며 할례는 마음에 할지니 영에 있고 율법 조문에 있지 아니한 것이라 그 칭찬이 사람에게서가 아니요 다만 하나님에게서니라</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </details>
         </div>
+
+        <!-- 5. 참된 할례의 의미 (25-29절) -->
+        <div class="card border-teal-500">
+            <h2 class="card-title text-teal-800">
+                <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                5. 참된 할례의 의미
+            </h2>
+            <div class="flex flex-col md:flex-row justify-between items-start mt-4 gap-4">
+                <div class="w-full md:w-1/2 p-4 bg-slate-100 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-slate-800">표면적 할례 (X)</h3>
+                    <p class="my-2 p-3 bg-white rounded-lg text-red-700">육신의 것, 율법을 어기면 <strong class="font-bold">무효</strong></p>
+                </div>
+                <div class="w-full md:w-1/2 p-4 bg-teal-100 rounded-lg text-center">
+                    <h3 class="font-bold text-lg text-teal-800">이면적 할례 (O)</h3>
+                    <p class="my-2 p-3 bg-white rounded-lg text-green-700"><strong class="font-bold">마음</strong>에 하는 것, 영에 있음</p>
+                </div>
+            </div>
+            <p class="text-center mt-6 bg-teal-50 p-4 rounded-lg font-bold text-teal-900">핵심: 진정한 칭찬은 사람에게서가 아니라, 오직 <strong class="text-teal-700">하나님에게서</strong> 온다.</p>
+            <details class="mt-4">
+                <summary>말씀 보기 (25-29절)</summary>
+                <div class="verse-box">
+                    <p><strong>25</strong> 네가 <strong class="text-teal-600">율법을 행하면 할례가 유익하나</strong> 만일 <strong class="text-red-600">율법을 범하면 네 할례는 무할례가 되느니라</strong></p>
+                    <p><strong>26</strong> 그런즉 <strong class="text-teal-600">무할례자가 율법의 규례를 지키면</strong> 그 무할례를 할례와 같이 여길 것이 아니냐</p>
+                    <p><strong>27</strong> 또한 본래 무할례자가 율법을 온전히 지키면 율법 조문과 할례를 가지고 율법을 범하는 <strong class="text-red-600">너를 정죄하지 아니하겠느냐</strong></p>
+                    <p><strong>28</strong> 무릇 <strong class="text-slate-700">표면적 유대인이 유대인이 아니요</strong> <strong class="text-slate-700">표면적 육신의 할례가 할례가 아니니라</strong></p>
+                    <p><strong>29</strong> 오직 <strong class="text-teal-600">이면적 유대인이 유대인이며</strong> <strong class="text-teal-600">할례는 마음에 할지니</strong> 영에 있고 율법 조문에 있지 아니한 것이라 그 <strong class="text-teal-600">칭찬이</strong> 사람에게서가 아니요 다만 <strong class="text-teal-600">하나님에게서니라</strong></p>
+                </div>
+            </details>
+        </div>
+
     </div>
 
-    <script>
-        document.querySelectorAll('.toggle-verses').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const content = e.target.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    e.target.textContent = e.target.textContent.replace('닫기', '보기');
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    e.target.textContent = e.target.textContent.replace('보기', '닫기');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
